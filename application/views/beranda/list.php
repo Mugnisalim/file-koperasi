@@ -11,7 +11,7 @@
             <div class="box-content">
                 <div class="row">
                     <div class="col-md-12">
-                        <p class="lead">Selamat datang di sistem <?=config_item('web_title')?></p>
+                        <p class="lead">Selamat Datang </p>
                     </div>
                 </div>
             </div>

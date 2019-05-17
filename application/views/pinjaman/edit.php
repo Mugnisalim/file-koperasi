@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
-    	<div class="panel panel-primary">
+    	<div class="panel panel">
             <div class="panel-heading">
                 <h4 class="panel-title">Edit Data <?=$this->title?></h4>
             </div>
@@ -50,8 +50,7 @@
 								$checked_tahun = 'checked="checked"';
 							}
 							?>
-                            	<input type="radio" name="flag" class="flag" value="Bulan" <?=$checked_bulan?> /> Bulan&nbsp;&nbsp;
-                            	<input type="radio" name="flag" class="flag" value="Tahun" <?=$checked_tahun?> /> Tahun
+                            	
                             </div>
                         </div>
                         <div class="form-group">

@@ -24,7 +24,7 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-    	<div class="panel panel-primary">
+    	<div class="panel panel">
             <input type="hidden" id="hid_paging" />
             <input type="hidden" id="hid_sort_by" />
             <input type="hidden" id="hid_sort_order" />

@@ -17,10 +17,6 @@ class Berandas extends CI_Controller
 		});','embed');*/
 
 		$this->template->add_title('BERANDA');
-		$breadcrumb = array(
-			'berandas' => 'Beranda',
-		);
-		$this->template->add_breadcrumb($breadcrumb);
 
 		$data['result'] = array();//$this->item->list_stok();
 

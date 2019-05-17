@@ -26,9 +26,12 @@ if(count($result)>0){
 		$sorting = (($sort_order == 'asc' && $sort_by == $key_field) ? 'desc' : 'asc');
 		$anchor = '<a class="sorting '.$class.'" href="#" field="'.$key_field.'" name="'.$sorting.'">'.$val_field.'</a>';
 		
-        $tpl_head .= '<th>'.$anchor.'</th>';
+       
     }
-	$tpl_head .= '<th>Aksi</th>';
+	$tpl_head .= '<th>Nama</th>';
+    $tpl_head .= '<th>Username</th>';
+    $tpl_head .= '<th>Level</th>';
+    $tpl_head .= '<th><center>Aksi</center></th>';
     $tpl_head .= '</tr>';
     echo $tpl_head;
     ?>
@@ -65,7 +68,7 @@ if(count($result)>0){
 <div id="modal-confirm" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body">Apakah anda yakin akan menghapus data ini?</div>
+            <div class="modal-body">Kamu Yakin?</div>
             <div class="modal-footer">
             	<input type="hidden" id="userid" />
                 <button type="button" data-dismiss="modal" class="btn btn-default">Batal</button>

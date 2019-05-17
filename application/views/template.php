@@ -16,7 +16,7 @@
 			color:#F00;
 		}
 		.angka{
-			text-align: right;	
+			text-align: left;	
 		}
 	</style>
 
@@ -31,7 +31,7 @@
 		<div id="main-content">
 
 			<?php echo  $_title_page ;?>
-            <?php echo  $_breadcrumb ;?>
+            
             <?php echo  $content ; ?>
 
 

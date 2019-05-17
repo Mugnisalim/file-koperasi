@@ -29,9 +29,16 @@ if(count($result)>0){
 		$sorting = (($sort_order == 'asc' && $sort_by == $key_field) ? 'desc' : 'asc');
 		$anchor = '<a class="sorting '.$class.'" href="#" field="'.$key_field.'" name="'.$sorting.'">'.$val_field.'</a>';
 		
-        $tpl_head .= '<th style="text-align:center">'.$anchor.'</th>';
+       
     }
-	$tpl_head .= '<th style="text-align:center">Aksi</th>';
+	$tpl_head .= '<th style="text-align:center">No Transaksi</th>';
+    $tpl_head .= '<th style="text-align:center">Tanggal</th>';
+$tpl_head .= '<th style="text-align:center">Nasabah</th>';
+$tpl_head .= '<th style="text-align:center">Pokok</th>';
+$tpl_head .= '<th style="text-align:center">Wajib</th>';
+$tpl_head .= '<th style="text-align:center">Sukarela</th>';
+$tpl_head .= '<th style="text-align:center">Aksi</th>';
+
     $tpl_head .= '</tr>';
     echo $tpl_head;
     ?>

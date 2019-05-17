@@ -25,11 +25,7 @@ $total_pinjaman = $detail['perbulan']*$lama_angsuran;
                 <td>:</td>
                 <td><?=$detail['no_member']?></td>
             </tr>
-            <tr>
-                <td>Perusahaan</td>
-                <td>:</td>
-                <td><?=$detail['company_name']?></td>
-            </tr>
+            
         </table>
 
         
@@ -66,15 +62,15 @@ $total_pinjaman = $detail['perbulan']*$lama_angsuran;
             <table width="100%" border="0" cellspacing="0" cellpadding="3">
                 <tr>
                     <td width="40%">&nbsp;</td>
-                    <td width="20%" align="center" style="background-color:#3FC"><strong>Pokok Pinjaman</strong></td>
-                    <td width="20%" align="center" style="background-color:#3FC"><strong>Bunga</strong></td>
-                    <td width="20%" align="center" style="background-color:#3FC"><strong>Total Pinjaman</strong></td>
+                    <td width="20%" align="center" style=""><strong>Pokok Pinjaman</strong></td>
+                    <td width="20%" align="center" style=""><strong>Bunga</strong></td>
+                    <td width="20%" align="center" style=""><strong>Total Pinjaman</strong></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
-                    <td align="center" style="background-color:#3FC"><strong><?=format_uang($detail['amount'])?></strong></td>
-                    <td align="center" style="background-color:#3FC"><strong><?=format_uang($total_pinjaman-$detail['amount'])?></strong></td>
-                    <td align="center" style="background-color:#3FC"><strong><?=format_uang($total_pinjaman)?></strong></td>
+                    <td align="center" style=""><strong><?=format_uang($detail['amount'])?></strong></td>
+                    <td align="center" style=""><strong><?=format_uang($total_pinjaman-$detail['amount'])?></strong></td>
+                    <td align="center" style=""><strong><?=format_uang($total_pinjaman)?></strong></td>
                 </tr>
             </table>
 

@@ -10,7 +10,7 @@
         <div class="input-group">
         <input id="txt_keywords" class="txt_keywords form-control" type="text" value="<?=$keyword?>">
         <span class="input-group-btn">
-        <button class="btn btn-success btn_search" type="button">Cari</button>
+        <button class="btn btn-success btn_search" type="button"><i class="fa fa-search"></i></button>
         </span>
         </div>
     </div>
@@ -24,7 +24,7 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-    	<div class="panel panel-primary">
+    	<div class="panel panel-">
             <input type="hidden" id="hid_paging" />
             <input type="hidden" id="hid_sort_by" />
             <input type="hidden" id="hid_sort_order" />

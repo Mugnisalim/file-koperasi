@@ -8,50 +8,55 @@
         </li>
         <li>&nbsp;</li>
         <?php
-		$classBeranda		= '';
-		$classSimpanan		= '';
-		$classPinjaman		= '';
-		$classAngsuran		= '';
-		$classPegawai		= '';
-		$classAnggota		= '';
+        $classBeranda       = '';
+        $classSimpanan      = '';
+        $classPinjaman      = '';
+        $classAngsuran      = '';
+        $classPegawai       = '';
+        $classAnggota       = '';
 
-		$classSetting		= '';
-		$classSettingUser	= '';
-		$classSettingCompany= '';
+        $classSetting       = '';
+        $classSettingUser   = '';
+        $classSettingCompany= '';
 
-		$classReport			= '';
+        $classReport            = '';
+        $classReportPotongan    = '';
 
 
-		if($this->uri->segment(1)=='' || $this->uri->segment(1)=='berandas'){
-			$classBeranda	= 'class="active"';
-		}
-		if($this->uri->segment(1)=='simpanans'){
-			$classSimpanan	= 'class="active"';
-		}
-		if($this->uri->segment(1)=='pinjamans'){
-			$classPinjaman	= 'class="active"';
-		}
-		if($this->uri->segment(1)=='angsurans'){
-			$classAngsuran	= 'class="active"';
-		}
-		if($this->uri->segment(1)=='employees'){
-			$classPegawai	= 'class="active"';
-		}
-		if($this->uri->segment(1)=='anggotas'){
-			$classAnggota	= 'class="active"';
-	
-			
-		}
-		if($this->uri->segment(1)=='users' || $this->uri->segment(1)=='perusahaans'){
-			$classSetting	= 'class="active"';
-			if($this->uri->segment(1)=='users'){
-				$classSettingUser	= 'class="active"';
-			}
-			if($this->uri->segment(1)=='perusahaans'){
-				$classSettingCompany	= 'class="active"';
-			}
-		}
-		?>
+        if($this->uri->segment(1)=='' || $this->uri->segment(1)=='berandas'){
+            $classBeranda   = 'class="active"';
+        }
+        if($this->uri->segment(1)=='simpanans'){
+            $classSimpanan  = 'class="active"';
+        }
+        if($this->uri->segment(1)=='pinjamans'){
+            $classPinjaman  = 'class="active"';
+        }
+        if($this->uri->segment(1)=='angsurans'){
+            $classAngsuran  = 'class="active"';
+        }
+        if($this->uri->segment(1)=='employees'){
+            $classPegawai   = 'class="active"';
+        }
+        if($this->uri->segment(1)=='anggotas'){
+            $classAnggota   = 'class="active"';
+        }
+        if($this->uri->segment(1)=='laporan_potongans'){
+            $classReport    = 'class="active"';
+            if($this->uri->segment(1)=='laporan_potongans'){
+                $classReportPotongan    = 'class="active"';
+            }
+        }
+        if($this->uri->segment(1)=='users' || $this->uri->segment(1)=='perusahaans'){
+            $classSetting   = 'class="active"';
+            if($this->uri->segment(1)=='users'){
+                $classSettingUser   = 'class="active"';
+            }
+            if($this->uri->segment(1)=='perusahaans'){
+                $classSettingCompany    = 'class="active"';
+            }
+        }
+        ?>
 
         <li <?=$classBeranda?>>
             <a href="<?=site_url('berandas')?>">
@@ -60,8 +65,8 @@
             </a>
         </li>
         <?php
-		if($this->session->userdata('roleid')==1){
-		?>
+        if($this->session->userdata('roleid')==1){
+        ?>
             <li <?=$classPegawai?>>
                 <a href="<?=site_url('employees')?>">
                 <i class="fa fa-user"></i>
@@ -69,9 +74,9 @@
                 </a>
             </li>
         <?php
-		}
-		if($this->session->userdata('roleid')==1 || $this->session->userdata('roleid')==2){
-		?>
+        }
+        if($this->session->userdata('roleid')==1 || $this->session->userdata('roleid')==2){
+        ?>
             <li <?=$classAnggota?>>
                 <a href="<?=site_url('anggotas')?>">
                 <i class="fa fa-users"></i>
@@ -98,16 +103,22 @@
                 </a>
             </li>
         <?php
-		}
-		?>
+        }
+        ?>
 
-       
+        <?php
+        if($this->session->userdata('roleid')==1 || $this->session->userdata('roleid')==3){
+        ?>
+           
+        <?php
+        }
+        ?>
 
 
 
         <?php
-		if($this->session->userdata('roleid')==1){
-		?>
+        if($this->session->userdata('roleid')==1){
+        ?>
     
             <li <?=$classSetting?>>
                 <a href="#" class="dropdown-toggle">
@@ -125,8 +136,8 @@
                 </ul>
             </li>
         <?php
-		}
-		?>
+        }
+        ?>
 
     </ul>
     <div id="sidebar-collapse" class="visible-lg">

@@ -29,9 +29,16 @@ if(count($result)>0){
 		$sorting = (($sort_order == 'asc' && $sort_by == $key_field) ? 'desc' : 'asc');
 		$anchor = '<a class="sorting '.$class.'" href="#" field="'.$key_field.'" name="'.$sorting.'">'.$val_field.'</a>';
 		
-        $tpl_head .= '<th style="text-align:center">'.$anchor.'</th>';
+       
     }
-	$tpl_head .= '<th style="text-align:center">Aksi</th>';
+	$tpl_head .= '<th style="text-align:center">No Pinjaman</th>';
+    $tpl_head .= '<th style="text-align:center">Tanggal</th>';
+    $tpl_head .= '<th style="text-align:center">Nasabah</th>';
+    $tpl_head .= '<th style="text-align:center">Pinjaman</th>';
+    $tpl_head .= '<th style="text-align:center">Bunga</th>';
+    $tpl_head .= '<th style="text-align:center">Lama</th>';
+    $tpl_head .= '<th style="text-align:center">Angsuran</th>';
+    $tpl_head .= '<th style="text-align:center">Aksi</th>';
     $tpl_head .= '</tr>';
     echo $tpl_head;
     ?>
@@ -54,22 +61,22 @@ if(count($result)>0){
 			}
 			?>
 			
-			<?=format_uang($result_val['bunga'])?>% <?=$text?>
+			<?=format_uang($result_val['bunga'])?><?=$text?>
             </td>
             <td align="center"><?=round($result_val['lama_angsuran']).' '.$result_val['flag']?></td>
             <td align="right"><?=format_uang($result_val['perbulan'])?></td>
             <td>
             	<div align="right">
-                	<a class="btn btn-primary btn-sm" href="<?=site_url($this->func.'s/edit/id/'.$result_val['id'])?>">
-                    <i class="fa fa-edit"></i>
+                	<a class="btn btn-danger btn-sm" href="<?=site_url($this->func.'s/edit/id/'.$result_val['id'])?>" title="Edit">
+                   Edit
                     </a>
                     &nbsp;&nbsp;
-                	<a class="btn btn-info btn-sm" href="<?=site_url($this->func.'s/print_data/id/'.$result_val['id'])?>" title="Print" target="_blank">
-                    <i class="fa fa-print"></i>
+                	<a class="btn btn-danger btn-sm" href="<?=site_url($this->func.'s/print_data/id/'.$result_val['id'])?>" title="Print" target="_blank">
+                    Print
                     </a>
                     &nbsp;&nbsp;
                     <a class="btn btn-danger  btn-sm delete" field="<?=$result_val['id']?>" data-toggle="modal" data-target="#modal-confirm" title="Hapus">
-                    <i class="fa fa-trash-o"></i>
+                   Hapus
                     </a>
 
                 </div>
@@ -86,7 +93,7 @@ if(count($result)>0){
 <div id="modal-confirm" tabindex="-1" role="dialog" aria-hidden="true" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body">Apakah anda yakin akan menghapus data ini?</div>
+            <div class="modal-body">Kamu Yakin?</div>
             <div class="modal-footer">
             	<input type="hidden" id="id" />
                 <button type="button" data-dismiss="modal" class="btn btn-default">Batal</button>

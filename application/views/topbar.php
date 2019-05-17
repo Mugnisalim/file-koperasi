@@ -2,7 +2,7 @@
 <span class="fa fa-bars"></span>
 </button>
 <?php
-	$logo = base_url('template/images/logo.png');
+    $logo = base_url('template/images/logo.png');
 ?>
 <a class="navbar-brand" href="#" style="padding-top:15px">
 <small>
@@ -13,12 +13,12 @@ KOPERASI
 <?php
 $detail = detail_employee($this->session->userdata('employeeid'));
 if($detail['gender']=='Laki-laki'){
-	$avatar = base_url('template/images/employee/male.png');
+    $avatar = base_url('template/images/employee/male.png');
 } else {
-	$avatar = base_url('template/images/employee/female.png');
+    $avatar = base_url('template/images/employee/female.png');
 }
 if($detail['photo']){
-	$avatar = base_url('template/images/employee/'.$detail['photo']);
+    $avatar = base_url('template/images/employee/'.$detail['photo']);
 }
 ?>
 
